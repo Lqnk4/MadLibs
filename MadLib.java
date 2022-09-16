@@ -19,6 +19,11 @@ public class MadLib {
         int lineCount = 7;
 
         List<String> output = new ArrayList<>();
+
+        System.out.println("Your name is: ");
+        String name = input.nextLine();
+        System.out.println("The data is: (YYYY/MM/DD) ");
+        String date = input.nextLine();
         
 
         for(int i = 0;i <lineCount; i++) {
@@ -32,7 +37,8 @@ public class MadLib {
 
         }
 
-        System.out.println(output);
+        System.out.println("Name: " + name);
+        System.out.println("Date: " + date);
 
         int flag = 0;
 
