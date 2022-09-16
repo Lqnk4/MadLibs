@@ -6,6 +6,10 @@ public class MadLib {
     public static void main(String... args) throws IOException {
         Scanner input = new Scanner(System.in);
 
+        /**
+         * User input replaces FULL CAPS WORDS
+         */
+
         String[] madLib = {
             "It was a ADJ november day.",
             "I woke up to the ADJ smell of BIRD roasting in the ROOM downstairs.",
@@ -13,10 +17,10 @@ public class MadLib {
             "My mom said, 'See if NAME needs a fresh NOUN.' ",
             "So I carried a tray of glasses full of NOUN into the VERB room.",
             "When I got there, I couldn't believe my NOUN!",
-            "There were NOUN VERB on the NOUN!"
+            "There were PLURALNOUN VERB on the NOUN!"
         };
 
-        int lineCount = 7;
+        int lineCount = 7; // Important to Update
 
         List<String> output = new ArrayList<>();
 
