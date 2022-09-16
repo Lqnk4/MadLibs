@@ -1,21 +1,56 @@
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class MadLib {
     public static void main(String... args) throws IOException {
-        File _madLibs = new File("MadLib.txt");
         Scanner input = new Scanner(System.in);
-        BufferedReader reader = new BufferedReader(new FileReader(_madLibs));
 
+        String[] madLib = {
+            "It was a ADJ november day.",
+            "I woke up to the ADJ smell of BIRD roasting in the ROOM downstairs.",
+            "I VERB down the stairs to see if I could help VERB the dinner.",
+            "My mom said, 'See if NAME needs a fresh NOUN.' ",
+            "So I carried a tray of glasses full of NOUN into the VERB room.",
+            "When I got there, I couldn't believe my NOUN!",
+            "There were NOUN VERB on the NOUN!"
+        };
 
-        for(int i = 0;i <7; i++) {
+        int lineCount = 7;
 
+        List<String> output = new ArrayList<>();
+        
+
+        for(int i = 0;i <lineCount; i++) {
+            String[] line = madLib[i].split(" ");
+            for(int j = 0;j < line.length;j++) {
+                if(line[j].equals(line[j].toUpperCase()) && line[j].length() > 1) {
+                    System.out.println("Please enter a " + line[j]);
+                    output.add(input.nextLine());
+                }
+            }
 
         }
 
-        StringBuilder output = new StringBuilder();
+        System.out.println(output);
 
+        int flag = 0;
+
+        for(int i = 0;i < lineCount;i++) {
+            String[] lineOut = madLib[i].split(" ");
+            for(int j = 0;j < lineOut.length;j++) {
+                if(lineOut[j].equals(lineOut[j].toUpperCase()) && lineOut[j].length() > 1) {
+                    lineOut[j] = output.get(flag);
+                    flag++;
+                }
+            }
+            for(int j = 0;j < lineOut.length;j++) {
+                System.out.print(lineOut[j] + " ");
+            }
+            System.out.print("\n");
+        }
+
+        input.close();
 
     }
 
