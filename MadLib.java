@@ -20,7 +20,7 @@ public class MadLib {
             "There were PLURALNOUN VERB on the NOUN!"
         };
 
-        int lineCount = 7; // Important to Update
+        int lineCount = madLib.length;
 
         List<String> output = new ArrayList<>();
 
