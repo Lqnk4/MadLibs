@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.time.*;
 
 
 public class MadLib {
@@ -26,8 +27,6 @@ public class MadLib {
 
         System.out.println("Your name is: ");
         String name = input.nextLine();
-        System.out.println("The data is: (YYYY/MM/DD) ");
-        String date = input.nextLine();
         
 
         for(int i = 0;i <lineCount; i++) {
@@ -42,7 +41,7 @@ public class MadLib {
         }
 
         System.out.println("Name: " + name);
-        System.out.println("Date: " + date);
+        System.out.println("Date: " + java.time.LocalDate.now());
 
         int flag = 0;
 
